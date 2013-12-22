@@ -1,0 +1,25 @@
+# Copyright 2014 Tom Grennan. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
+t1:
+    init: true
+    set:
+        t2: false
+        t3: false
+    reset:
+        t2: true
+t2:
+    init: false
+    set:
+        t1: false
+        t3: false
+    reset:
+        t1: true
+t3:
+    init: false
+    set:
+        t1: false
+        t2: false
+    reset:
+        t1: true

@@ -1,0 +1,309 @@
+# Copyright 2014 Tom Grennan. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
+# This is to test scrolling.
+
+main.s000:
+    help: !!str |
+        line00
+        line01
+        line02
+        line03
+        line04
+        line04
+        line05
+        line06
+        line07
+        line08
+        line09
+        line10
+        line11
+        line12
+        line13
+        line14
+        line15
+        line16
+        line17
+        line18
+        line19
+        line20
+        line21
+        line22
+        line23
+        line24
+        line25
+        line26
+        line27
+        line28
+        line29
+        line30
+        line31
+        line32
+        line33
+        line34
+        line35
+        line36
+        line37
+        line38
+        line39
+        line40
+        line41
+        line42
+        line43
+        line44
+        line45
+        line46
+        line47
+        line48
+        line49
+        line50
+        line51
+        line52
+        line53
+        line54
+        line55
+        line56
+        line57
+        line58
+        line59
+        line60
+        line61
+        line62
+        line63
+        line64
+        line65
+        line66
+        line67
+        line68
+        line69
+        line70
+        line71
+        line72
+        line73
+        line74
+        line75
+        line76
+        line77
+        line78
+        line79
+        line80
+        line81
+        line82
+        line83
+        line84
+        line85
+        line86
+        line87
+        line88
+        line89
+        line90
+        line91
+        line92
+        line93
+        line94
+        line95
+        line96
+        line97
+        line98
+        line99
+
+main.s001:
+main.s002:
+main.s003:
+main.s004:
+main.s005:
+main.s006:
+main.s007:
+main.s008:
+main.s009:
+main.s010:
+main.s011:
+main.s012:
+main.s013:
+main.s014:
+main.s015:
+main.s016:
+main.s017:
+main.s018:
+main.s019:
+main.s020:
+main.s021:
+main.s022:
+main.s023:
+main.s024:
+main.s025:
+main.s026:
+main.s027:
+main.s028:
+main.s029:
+main.s030:
+main.s031:
+main.s032:
+main.s033:
+main.s034:
+main.s035:
+main.s036:
+main.s037:
+main.s038:
+main.s039:
+main.s040:
+main.s041:
+main.s042:
+main.s043:
+main.s044:
+main.s045:
+main.s046:
+main.s047:
+main.s048:
+main.s049:
+main.s050:
+main.s051:
+main.s052:
+main.s053:
+main.s054:
+main.s055:
+main.s056:
+main.s057:
+main.s058:
+main.s059:
+main.s060:
+main.s061:
+main.s062:
+main.s063:
+main.s064:
+main.s065:
+main.s066:
+main.s067:
+main.s068:
+main.s069:
+main.s070:
+main.s071:
+main.s072:
+main.s073:
+main.s074:
+main.s075:
+main.s076:
+main.s077:
+main.s078:
+main.s079:
+main.s080:
+main.s081:
+main.s082:
+main.s083:
+main.s084:
+main.s085:
+main.s086:
+main.s087:
+main.s088:
+main.s089:
+main.s090:
+main.s091:
+main.s092:
+main.s093:
+main.s094:
+main.s095:
+main.s096:
+main.s097:
+main.s098:
+main.s099:
+main.s100:
+main.s101:
+main.s102:
+main.s103:
+main.s104:
+main.s105:
+main.s106:
+main.s107:
+main.s108:
+main.s109:
+main.s110:
+main.s111:
+main.s112:
+main.s113:
+main.s114:
+main.s115:
+main.s116:
+main.s117:
+main.s118:
+main.s119:
+main.s120:
+main.s121:
+main.s122:
+main.s123:
+main.s124:
+main.s125:
+main.s126:
+main.s127:
+main.s128:
+main.s129:
+main.s130:
+main.s131:
+main.s132:
+main.s133:
+main.s134:
+main.s135:
+main.s136:
+main.s137:
+main.s138:
+main.s139:
+main.s140:
+main.s141:
+main.s142:
+main.s143:
+main.s144:
+main.s145:
+main.s146:
+main.s147:
+main.s148:
+main.s149:
+main.s150:
+main.s151:
+main.s152:
+main.s153:
+main.s154:
+main.s155:
+main.s156:
+main.s157:
+main.s158:
+main.s159:
+main.s160:
+main.s161:
+main.s162:
+main.s163:
+main.s164:
+main.s165:
+main.s166:
+main.s167:
+main.s168:
+main.s169:
+main.s170:
+main.s171:
+main.s172:
+main.s173:
+main.s174:
+main.s175:
+main.s176:
+main.s177:
+main.s178:
+main.s179:
+main.s180:
+main.s181:
+main.s182:
+main.s183:
+main.s184:
+main.s185:
+main.s186:
+main.s187:
+main.s188:
+main.s189:
+main.s190:
+main.s191:
+main.s192:
+main.s193:
+main.s194:
+main.s195:
+main.s196:
+main.s197:
+main.s198:
+main.s199:

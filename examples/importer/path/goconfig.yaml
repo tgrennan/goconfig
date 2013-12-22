@@ -1,0 +1,9 @@
+# Copyright 2014 Tom Grennan. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
+import:
+    - github.com/tgrennan/goconfig/examples/importer/first
+    - github.com/tgrennan/goconfig/examples/importer/second
+    - github.com/tgrennan/goconfig/examples/importer/third
+main.s: ""

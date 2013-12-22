@@ -1,0 +1,8 @@
+/goconfig
+/goconfig.test
+/README.html
+/*.patch
+/a.out
+goconfiguration*.yaml
+*~
+*.swp
