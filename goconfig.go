@@ -10,7 +10,7 @@ import (
 	"github.com/tgrennan/fixme"
 	"github.com/tgrennan/quotation"
 	"github.com/tgrennan/sos"
-	"launchpad.net/goyaml"
+	"gopkg.in/yaml.v1"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -384,7 +384,7 @@ func (g *GoConfig) Load(config *bytes.Buffer) (err error) {
 		}
 	}
 	m := make(map[string]interface{})
-	if err = goyaml.Unmarshal(config.Bytes(), m); err != nil {
+	if err = yaml.Unmarshal(config.Bytes(), m); err != nil {
 		return
 	}
 	for name, v := range m {
@@ -701,7 +701,7 @@ func (g *GoConfig) unmarshal(pkg string) error {
 //	        a: false
 func (g *GoConfig) unmarshal1(buf []byte, _ *[]string) error {
 	m := make(map[string]*Entry)
-	if err := goyaml.Unmarshal(buf, m); err != nil {
+	if err := yaml.Unmarshal(buf, m); err != nil {
 		return fmt.Errorf("first pass %s %v", g.Package, err)
 	}
 	for name, x := range m {
@@ -726,7 +726,7 @@ func (g *GoConfig) unmarshal1(buf []byte, _ *[]string) error {
 //	import: foo
 func (g *GoConfig) unmarshal2(buf []byte, p *[]string) error {
 	m := make(map[string]*Union)
-	if err := goyaml.Unmarshal(buf, m); err != nil {
+	if err := yaml.Unmarshal(buf, m); err != nil {
 		return fmt.Errorf("second pass of %s %v", g.Package, err)
 	}
 	for name, x := range m {
@@ -752,7 +752,7 @@ func (g *GoConfig) unmarshal2(buf []byte, p *[]string) error {
 //	s: ""
 func (g *GoConfig) unmarshal3(buf []byte, p *[]string) error {
 	m := make(map[string]string)
-	if err := goyaml.Unmarshal(buf, m); err != nil {
+	if err := yaml.Unmarshal(buf, m); err != nil {
 		return fmt.Errorf("fourth pass of %s %v", g.Package, err)
 	}
 	for name, x := range m {
@@ -778,7 +778,7 @@ func (g *GoConfig) unmarshal3(buf []byte, p *[]string) error {
 //	]
 func (g *GoConfig) unmarshal4(buf []byte, p *[]string) error {
 	m := make(map[string][]string)
-	if err := goyaml.Unmarshal(buf, m); err != nil {
+	if err := yaml.Unmarshal(buf, m); err != nil {
 		return fmt.Errorf("third pass of %s %v", g.Package, err)
 	}
 	if a, ok := m["import"]; ok {
