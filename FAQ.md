@@ -1,5 +1,3 @@
-## goconfig - faq
-
 ### contacts
 
 [`mailto:author`](mailto:tmgrennan@gmail.com), [`mailto:group`](

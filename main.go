@@ -26,29 +26,31 @@ type mainT struct {
 
 const usageSrc = `
 Usage:
-    goconfig [flags] [-cli] [package]{{if .WebServer}}
-    goconfig [flags] -http=<server:port>{{end}}
-    goconfig [flags] -show [-all] [package]
-    goconfig [flags] <[go] command> [go flags] [package [args]]
+	goconfig [flags] [-cli] [package]{{if .WebServer}}
+	goconfig [flags] -http=<server:port>{{end}}
+	goconfig [flags] -show [-all] [package]
+	goconfig [flags] <[go] command> [go flags] [package [args]]
 
 Flags:
-   -fixme[=<file>]
-    Print debugging messages on stderr or in the given file.
+	-fixme[=<file>]
+		Print debugging messages on stderr or in the given file.
 
-   -config[=<file>]
-    Load configuration from stdin or the given file instead of the default,
-    goconfiguration_GOOS_GOARCH.yaml
+	-config[=<file>]
+		Load configuration from stdin or the given file instead of the
+		default, goconfiguration_GOOS_GOARCH.yaml
 
 Options:{{.TUI}}{{.WebServer}}
-   -show [-all]
-    Instead of a menu, print the configured [or all] entries.
+	-show [-all]
+		Instead of a menu, print the configured [or all] entries.
 
-    go <command> [build and test flags] [package [args]]
-    Run the given command with the configured constraints and strings.
+	go <command> [build and test flags] [package [args]]
+		Run the given command with the configured constraints and
+		strings.
 
-Goconfig operates on one package per execution unless given "all"
+Goconfig operates on one package per execution unless given ` +
+	"`all`" + `
 where it makes a menu of packages within GOPATH containing:
-    goconfig[_GOOS][_GOARCH].yaml
+` + "`goconfig[_GOOS][_GOARCH].yaml`" + `
 `
 
 var (
@@ -191,16 +193,17 @@ func (m *mainT) help() (err error) {
 	var opt struct{ TUI, WebServer string }
 	if _, ok := Menu["tui"]; ok {
 		opt.TUI = `
-   -cli
-    The default action is a terminal user interface unless running on a
-    DUMB terminal or this flag is given to revert to a command line
-    interface.
+	-cli
+		The default action is a terminal user interface unless running
+		on a DUMB terminal or this flag is given to revert to a command
+		line interface.
 `
+
 	}
 	if _, ok := Menu["webserver"]; ok {
 		opt.WebServer = `
-   -http=<server:port>
-    Runs a web server at the given address instead of a TUI or CLI.
+	-http=<server:port>
+		Runs a web server at the given address instead of a TUI or CLI.
 `
 	}
 	if m.a.String(0) == "help" || m.flag("help") {

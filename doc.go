@@ -3,10 +3,10 @@
 // license that can be found in the LICENSE file.
 
 /*
-Goconfig is a utility to configure GO packages in the style of the Linux kernel
-whereby the developer declares configurable parameters and the user runs this
-much like `make menuconfig && make ...` to configure, build, test, and install.
-Goconfig has CLI, TUI and webserver menus.
+Command goconfig is a utility to configure GO packages in the style of the
+Linux kernel whereby the developer declares configurable parameters and the
+user runs this much like `make menuconfig && make ...` to configure, build,
+test, and install.  Goconfig has CLI, TUI and webserver menus.
 
 Goconfig should be functional on any GO supported OS/ARCH but is primarily
 developed and tested with `linux_amd64`.  Similarly, the webserver is only
