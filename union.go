@@ -5,7 +5,7 @@
 package main
 
 import (
-	"github.com/tgrennan/quotation"
+	"gopkg.in/tgrennan/quotation.v0"
 	"os/exec"
 	"strconv"
 	"strings"

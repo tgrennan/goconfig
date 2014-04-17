@@ -4,13 +4,13 @@
 
 package main
 
-// go test [-v] github.com/tgrennan/goconfig [-- -fixme[=FILE]]
+// go test [-v] gopkg.in/tgrennan/goconfig.v0 [-- -fixme[=FILE]]
 
 import (
 	"bytes"
 	"fmt"
-	"github.com/tgrennan/fixme"
-	"github.com/tgrennan/sos"
+	"gopkg.in/tgrennan/fixme.v0"
+	"gopkg.in/tgrennan/sos.v0"
 	"log"
 	"os"
 	"os/exec"

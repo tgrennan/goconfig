@@ -7,9 +7,9 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/tgrennan/fixme"
-	"github.com/tgrennan/quotation"
-	"github.com/tgrennan/sos"
+	"gopkg.in/tgrennan/fixme.v0"
+	"gopkg.in/tgrennan/quotation.v0"
+	"gopkg.in/tgrennan/sos.v0"
 	"gopkg.in/yaml.v1"
 	"os"
 	"os/exec"

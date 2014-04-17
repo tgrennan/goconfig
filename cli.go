@@ -10,7 +10,7 @@ import (
 	"bufio"
 	"bytes"
 	"errors"
-	"github.com/tgrennan/fixme"
+	"gopkg.in/tgrennan/fixme.v0"
 	"os"
 	"os/exec"
 	"strconv"
