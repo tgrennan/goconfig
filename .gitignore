@@ -1,5 +1,6 @@
 /goconfig
 /goconfig.test
+/goconfig.v*
 /README.html
 /*.patch
 /a.out

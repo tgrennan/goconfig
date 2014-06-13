@@ -12,12 +12,14 @@ import (
 	"gopkg.in/tgrennan/sos.v0"
 	"log"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 	"text/template"
 )
 
 type mainT struct {
+	p string
 	a sos.SoS
 	f *os.File
 	b *bytes.Buffer
@@ -25,11 +27,10 @@ type mainT struct {
 }
 
 const usageSrc = `
-Usage:
-	goconfig [flags] [-cli] [package]{{if .WebServer}}
-	goconfig [flags] -http=<server:port>{{end}}
-	goconfig [flags] -show [-all] [package]
-	goconfig [flags] <[go] command> [go flags] [package [args]]
+Usage:	{{.Prog}} [flags] [-cli] [package]{{if .WebServer}}
+	{{.Prog}} [flags] -http=<server:port>{{end}}
+	{{.Prog}} [flags] -show [-all] [package]
+	{{.Prog}} [flags] <[go] command> [go flags] [package [args]]
 
 Flags:
 	-fixme[=<file>]
@@ -79,6 +80,7 @@ func main() {
 			exit(1)
 		}
 	}()
+	m.p = filepath.Base(os.Args[0])
 	m.a = sos.New(os.Args[1:]...)
 	for _, f := range []func() error{
 		m.help,
@@ -190,7 +192,8 @@ func (m *mainT) gotool() (err error) {
 }
 
 func (m *mainT) help() (err error) {
-	var opt struct{ TUI, WebServer string }
+	var opt struct{ Prog, TUI, WebServer string }
+	opt.Prog = m.p
 	if _, ok := Menu["tui"]; ok {
 		opt.TUI = `
 	-cli
